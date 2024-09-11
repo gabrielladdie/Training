@@ -110,4 +110,4 @@ rl.once('close', () => {
   console.log('Goodbye')
 })
 
-displayMenu()
+displayMenu();
