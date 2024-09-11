@@ -43,8 +43,10 @@ function addItem () {
           rl.question('Do you want to add another item? ', answer => {
             if (answer == 'yes') {
               addItem()
+            } else if (answer == 'no') {
+              displayMenu()
             } else {
-              rl.close()
+              console.log('Invalid input')
             }
           })
         })
@@ -66,8 +68,10 @@ function removeItem () {
     rl.question('Do you want to remove another item? ', answer => {
       if (answer == 'yes') {
         removeItem()
+      } else if (answer == 'no') {
+        displayMenu()
       } else {
-        rl.close()
+        console.log('Invalid input')
       }
     })
   })
@@ -75,23 +79,27 @@ function removeItem () {
 
 function viewItems () {
   console.log(list)
+  displayMenu();
 }
 
-rl.question('What do you want to do? add, remove, or view? ', answer => {
-  console.log(`You selected: ${answer}`)
+function displayMenu () {
+  rl.question('What do you want to do? add, remove, view or exit? ', answer => {
+    console.log(`You selected: ${answer}`)
 
-  if (answer == 'add') {
-    addItem()
-  } else if (answer == 'remove') {
-    console.log(list)
-    removeItem()
-  } else if (answer == 'view') {
-    viewItems();
-  } else {
-    console.log('Invalid input')
-    rl.close()
-  }
-})
+    if (answer == 'add') {
+      addItem()
+    } else if (answer == 'remove') {
+      console.log(list)
+      removeItem()
+    } else if (answer == 'view') {
+      viewItems() 
+    } else if (answer == 'exit') {
+      rl.close()
+    } else {
+      console.log('Invalid input');
+    }
+  })
+}
 
 rl.on('line', line => {
   console.log(line)
@@ -101,3 +109,5 @@ rl.once('close', () => {
   // end of input
   console.log('Goodbye')
 })
+
+displayMenu()
