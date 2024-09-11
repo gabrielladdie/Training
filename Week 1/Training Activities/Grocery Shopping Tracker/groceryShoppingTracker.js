@@ -10,19 +10,19 @@ let list = [
     itemName: 'Apples',
     Quantity: 5,
     Price: 1.99,
-    Purchased: 'no'
+    Purchased: false
   },
   {
     itemName: 'Eggs',
     Quantity: 5,
     Price: 1.99,
-    Purchased: 'no'
+    Purchased: false
   },
   {
     itemName: 'Oranges',
     Quantity: 5,
     Price: 1.99,
-    Purchased: 'no'
+    Purchased: true
   }
 ]
 
@@ -57,7 +57,7 @@ function removeItem () {
   rl.question('What do you want to remove? ', answer => {
     console.log(list)
     list.forEach((item, index) => {
-      if (item.itemName == answer) {
+      if (item.itemName.toLowerCase() == answer.toLowerCase()) {
         list.splice(index, 1)
       }
     })
