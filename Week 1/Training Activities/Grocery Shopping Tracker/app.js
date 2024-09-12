@@ -20,7 +20,26 @@ const logger = createLogger({
 
 const PORT = 3000
 
+// FUNCTIONS
+let list = [] //temp list for manipulation
 
+// read list.json, parse, then add to list temp array
+let JSONlist = fs.readFileSync('list.json', 'utf8');
+let parsedList = JSON.parse(JSONlist);
+list.push(parsedList);
+
+function writeFunction(){
+    fs.writeFileSync('list.json', JSON.stringify(list), err => {
+        if (err) {
+            console.log(err)
+        }
+    })
+}
+
+
+
+
+// CREATE SERVER
 const server = http.createServer((req, res) => {
 // request handling logic
 
@@ -46,8 +65,22 @@ switch (req.method) {
         res.statusCode = 200
         break;
 
-case 'POST':
-    
+    case 'POST':
+        body = ''
+        req.on('data', chunk => {
+            body += chunk
+        })
+
+        req.on('end', () => {
+            logger.info(`Request body: ${body}`);
+            //push and parse request body body to list temp array
+            list.push(JSON.parse(body));
+
+            // call writefunction to update list.json
+            writeFunction();
+            res.statusCode = 201; // created
+            res.end(JSON.stringify({message: "POST request handled"}));
+        })
     break;
 
     case 'PUT':
@@ -70,10 +103,10 @@ case 'POST':
         res.statusCode = 405
         res.end(JSON.stringify({ message: 'Method not supported' }))
         break;
-}
+    }
 
-// res.writeHead(200, { 'Content-Type': 'text/plain'});
-// res.end("Hello, World!");
+    // res.writeHead(200, { 'Content-Type': 'text/plain'});
+    // res.end("Hello, World!");
 })
 
 server.listen(PORT, () => {
