@@ -5,7 +5,7 @@ const rl = readline.createInterface({
   output: process.stdout // Write to standard output (console)
 })
 
-let list = [
+const list = [
   {
     itemName: 'Apples',
     Quantity: 5,
