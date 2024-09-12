@@ -95,6 +95,18 @@ switch (req.method) {
         })
         req.on('end', () => {
             logger.info(`Request body: ${body}`)
+            const updatedItem = JSON.parse(body);
+            const index = list.findIndex(item => item.itemName === updatedItem.itemName);
+            
+            if (index !== -1) {
+                // Update the item
+                list[index] = { ...list[index], ...updatedItem };
+                
+                // Write the updated list to the file
+                writeFunction();
+                
+                res.statusCode = 200;
+                res.end(JSON.stringify({ message: 'Item updated successfully', updatedItem: list[index] }));
             res.statusCode = 200
             res.end(JSON.stringify({ message: 'PUT request handled' }))
         })
