@@ -22,7 +22,6 @@ const PORT = 3000
 
 // FUNCTIONS
 let list = [] //temp list for manipulation
-
 // read list.json, parse, then add to list temp array
 let JSONlist = fs.readFileSync('list.json', 'utf8');
 let parsedList = JSON.parse(JSONlist);
@@ -35,8 +34,13 @@ function writeFunction(){
         }
     })
 }
-
-
+function deleteProductByName(itemToRemove) {
+  const initialLength = list.length
+  list = list.filter(item => item.itemName !== itemToRemove)
+  if (list.length === initialLength) {
+      logger.warn(`Item with name ${itemToRemove} not found`)
+  }
+}
 
 
 // CREATE SERVER
@@ -96,9 +100,26 @@ switch (req.method) {
         })
         break;
     case 'DELETE':
-        res.statusCode = 200
-        res.end(JSON.stringify({ message: 'DELETE request handled' }))
-        break;
+      //remove item from list with itemName from list temp array
+      req.on('data', chunk => {
+        body += chunk
+    })
+    req.on('end', () => {
+        logger.info(`Request body: ${body}`)
+        try {
+            const { itemName } = JSON.parse(body)
+            deleteProductByName(itemName)
+            writeFunction()
+            res.statusCode = 200
+            res.end(JSON.stringify({ message: 'Item deleted' }))
+        } catch (err) {
+            logger.error('Error parsing request body')
+            res.statusCode = 400
+            res.end(JSON.stringify({ message: 'Bad Request' }))
+        }
+    })
+    break;
+    
     default: // method not allowed
         res.statusCode = 405
         res.end(JSON.stringify({ message: 'Method not supported' }))

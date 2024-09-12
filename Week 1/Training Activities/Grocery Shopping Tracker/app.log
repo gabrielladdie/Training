@@ -122,3 +122,114 @@
             "Price": 1.99,
             "Purchased": false
     }
+2024-09-12T19:36:52.623Z [info]: [DELETE /]
+2024-09-12T19:37:15.767Z [info]: [GET /]
+2024-09-12T19:38:15.265Z [info]: [DELETE /]
+2024-09-12T19:38:37.171Z [info]: [DELETE /]
+2024-09-12T19:38:43.401Z [info]: [GET /]
+2024-09-12T19:40:52.001Z [info]: [GET /]
+2024-09-12T19:40:55.702Z [info]: [DELETE /]
+2024-09-12T19:41:04.074Z [info]: [DELETE /]
+2024-09-12T19:41:09.443Z [info]: [GET /]
+2024-09-12T19:45:30.305Z [info]: [GET /]
+2024-09-12T19:45:34.475Z [info]: [DELETE /]
+2024-09-12T19:45:39.866Z [info]: [GET /]
+2024-09-12T19:46:30.598Z [info]: [GET /]
+2024-09-12T19:46:37.065Z [info]: [DELETE /]
+2024-09-12T19:46:41.967Z [info]: [GET /]
+2024-09-12T19:53:03.851Z [info]: [GET /]
+2024-09-12T19:53:45.916Z [info]: [GET /]
+2024-09-12T19:54:43.791Z [info]: [GET /]
+2024-09-12T19:55:10.045Z [info]: [GET /]
+2024-09-12T19:55:39.405Z [info]: [GET /]
+2024-09-12T19:55:56.759Z [info]: [POST /]
+2024-09-12T19:55:56.760Z [info]: Request body: {
+                "ItemNumber": 3,
+                "itemName": "Oranges",
+                "Quantity": 5,
+                "Price": 1.99,
+                "Purchased": true
+            }
+2024-09-12T19:57:02.115Z [info]: [GET /]
+2024-09-12T19:59:27.387Z [info]: [GET /]
+2024-09-12T19:59:58.673Z [info]: [POST /]
+2024-09-12T19:59:58.673Z [info]: Request body: {
+    "itemName": "Cheese",
+    "Quantity": 5,
+    "Price": 1.99,
+    "Purchased": true
+}
+2024-09-12T20:00:03.776Z [info]: [GET /]
+2024-09-12T20:01:22.944Z [info]: Server is running on http://localhost:3000
+2024-09-12T20:01:32.807Z [info]: [GET /]
+2024-09-12T20:01:58.977Z [info]: [GET /]
+2024-09-12T20:02:04.117Z [info]: [POST /]
+2024-09-12T20:02:33.016Z [info]: Server is running on http://localhost:3000
+2024-09-12T20:02:34.681Z [info]: [GET /]
+2024-09-12T20:05:37.405Z [info]: [GET /]
+2024-09-12T20:05:54.782Z [info]: [GET /]
+2024-09-12T20:06:28.034Z [info]: [GET /]
+2024-09-12T20:06:42.826Z [info]: Server is running on http://localhost:3000
+2024-09-12T20:06:46.459Z [info]: [GET /]
+2024-09-12T20:07:08.342Z [info]: [GET /]
+2024-09-12T20:07:31.303Z [info]: [POST /]
+2024-09-12T20:07:41.768Z [info]: Server is running on http://localhost:3000
+2024-09-12T20:07:48.481Z [info]: [POST /]
+2024-09-12T20:08:08.417Z [info]: Server is running on http://localhost:3000
+2024-09-12T20:08:10.276Z [info]: [GET /]
+2024-09-12T20:08:16.737Z [info]: [GET /]
+2024-09-12T20:08:32.341Z [info]: [GET /]
+2024-09-12T20:08:50.155Z [info]: Server is running on http://localhost:3000
+2024-09-12T20:08:51.845Z [info]: [GET /]
+2024-09-12T20:09:18.113Z [info]: [POST /]
+2024-09-12T20:09:18.114Z [info]: Request body:   {
+        "ItemNumber": 1,
+        "itemName": "Apples",
+        "Quantity": 5,
+        "Price": 1.99,
+        "Purchased": false
+    }
+
+2024-09-12T20:09:40.491Z [info]: [POST /]
+2024-09-12T20:09:40.492Z [info]: Request body:   {
+        "ItemNumber": 1,
+        "itemName": "cheese",
+        "Quantity": 5,
+        "Price": 1.99,
+        "Purchased": false
+    }
+
+2024-09-12T20:10:05.993Z [info]: [DELETE /]
+2024-09-12T20:10:16.521Z [info]: [GET /]
+2024-09-12T20:11:38.031Z [info]: [DELETE /]
+2024-09-12T20:11:41.055Z [info]: [GET /]
+2024-09-12T20:12:14.561Z [info]: [DELETE /]
+2024-09-12T20:12:18.557Z [info]: [GET /]
+2024-09-12T20:14:59.324Z [info]: [GET /]
+2024-09-12T20:17:27.399Z [info]: [DELETE /]
+2024-09-12T20:17:36.638Z [info]: [GET /]
+2024-09-12T20:18:02.229Z [info]: [GET /]
+2024-09-12T20:18:05.782Z [info]: [DELETE /]
+2024-09-12T20:18:14.949Z [info]: [GET /]
+2024-09-12T20:20:19.716Z [info]: [DELETE /]
+2024-09-12T20:29:24.900Z [info]: [GET /]
+2024-09-12T20:29:56.335Z [info]: [DELETE /]
+2024-09-12T20:30:05.283Z [info]: [GET /]
+2024-09-12T20:34:43.990Z [info]: [DELETE /]
+2024-09-12T20:34:49.780Z [info]: [GET /]
+2024-09-12T20:36:28.956Z [info]: [GET /]
+2024-09-12T20:36:32.823Z [info]: [DELETE /]
+2024-09-12T20:36:35.334Z [info]: [GET /]
+2024-09-12T20:38:11.357Z [info]: [DELETE /]
+2024-09-12T20:38:14.476Z [info]: [GET /]
+2024-09-12T20:38:24.105Z [info]: [DELETE /]
+2024-09-12T20:38:28.920Z [info]: [GET /]
+2024-09-12T20:45:02.173Z [info]: [DELETE /]
+2024-09-12T20:45:11.704Z [info]: [GET /]
+2024-09-12T20:45:46.910Z [info]: [DELETE /]
+2024-09-12T20:45:50.724Z [info]: [GET /]
+2024-09-12T20:48:16.154Z [info]: [DELETE /]
+2024-09-12T20:48:19.608Z [info]: [GET /]
+2024-09-12T20:52:19.503Z [info]: [GET /]
+2024-09-12T20:52:24.623Z [info]: [DELETE /]
+2024-09-12T20:52:33.857Z [info]: [GET /]
