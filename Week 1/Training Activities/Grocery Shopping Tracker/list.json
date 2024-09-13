@@ -1,14 +1,14 @@
 [
   {
     "itemName": "Apples",
-    "quantity": 5,
+    "quantity": 3,
     "category": "Fruits",
     "price": 2.99,
     "isPurchased": false
   },
   {
-    "itemName": "Apples",
-    "quantity": 5,
+    "itemName": "Oranges",
+    "quantity": 3,
     "category": "Fruits",
     "price": 2.99,
     "isPurchased": false

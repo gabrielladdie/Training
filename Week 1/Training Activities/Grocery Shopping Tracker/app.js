@@ -118,7 +118,6 @@ const server = http.createServer((req, res) => {
           res.statusCode = 200;
           res.end(
             JSON.stringify({
-              message: "Item updated successfully",
               updatedItem: list[index],
             })
           );
