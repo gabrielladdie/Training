@@ -101,19 +101,22 @@ switch (req.method) {
             if (index !== -1) {
                 // Update the item
                 list[index] = { ...list[index], ...updatedItem };
-                
+
                 // Write the updated list to the file
                 writeFunction();
-                
+
                 res.statusCode = 200;
                 res.end(JSON.stringify({ message: 'Item updated successfully', updatedItem: list[index] }));
+            }
             res.statusCode = 200
             res.end(JSON.stringify({ message: 'PUT request handled' }))
         })
+    
+    
         break;
     case 'DELETE':
       //remove item from list with itemName from list temp array
-      req.on('data', chunk => {
+    req.on('data', chunk => {
         body += chunk
     })
     req.on('end', () => {
