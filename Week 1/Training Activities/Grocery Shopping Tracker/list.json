@@ -1,51 +1,16 @@
 [
   {
-    "ItemNumber": 1,
     "itemName": "Apples",
-    "Quantity": 5,
-    "Price": 1.99,
-    "Purchased": false
+    "quantity": 5,
+    "category": "Fruits",
+    "price": 2.99,
+    "isPurchased": false
   },
   {
-    "ItemNumber": 2,
-    "itemName": "Eggs",
-    "Quantity": 5,
-    "Price": 1.99,
-    "Purchased": false
-  },
-  {
-    "ItemNumber": 3,
-    "itemName": "Oranges",
-    "Quantity": 5,
-    "Price": 1.99,
-    "Purchased": true
-  },
-  {
-    "ItemNumber": 4,
-    "itemName": "Milk",
-    "Quantity": 5,
-    "Price": 1.99,
-    "Purchased": false
-  },
-  {
-    "ItemNumber": 5,
-    "itemName": "Berries",
-    "Quantity": 5,
-    "Price": 1.99,
-    "Purchased": false
-  },
-  {
-    "ItemNumber": 6,
-    "itemName": "cheese",
-    "Quantity": 5,
-    "Price": 1.99,
-    "Purchased": false
-  },
-  {
-    "ItemNumber": 1,
     "itemName": "Apples",
-    "Quantity": 5,
-    "Price": 1.99,
-    "Purchased": false
+    "quantity": 5,
+    "category": "Fruits",
+    "price": 2.99,
+    "isPurchased": false
   }
 ]
