@@ -12,6 +12,7 @@
   "dependencies": {
     "express": "^4.21.0",
     "grocery-shopping-tracker": "file:",
+    "jest": "^29.7.0",
     "node-fetch": "^3.3.2",
     "winston": "^3.14.2"
   }
